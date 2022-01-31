@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background: url(Backgrounds_Template-02 1.png);
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+h1 {
+  color: white;
+    margin-top: 20px;
+  margin-left: 44px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 68px;
+}
+
+.chatBox {
+  background: #1d2028;
+  border-radius: 12px;
+  width: 900px;
+  height: 700px;
+  margin: auto;
+  position: relative;
+}
+
+.chatInputBox {
+  background: #ffffff;
+  border-radius: 0px 0px 12px 12px;
+  width: 100%;
+  height: 105px;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+}
+
+.username {
+    font-weight: bold;
+    line-height: 14px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    margin-left: 18px;
+}
+
+.btn {
+    color: #FFFFFF;
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    border: 4px solid #FFFFFF;
+    border-radius: 12px;
+    padding: 7px 45px;
+    text-align: center;
+    position: absolute;
+    right: 510px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: #1d2028;
+}
