@@ -31,6 +31,30 @@ h1 {
   position: relative;
 }
 
+.chatBox::-webkit-scrollbar {
+    width: 4px;
+    height: 56px;
+}
+
+.chatBox::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.chatBox::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+.chatContainer {
+    background: #444548;
+    border-radius: 12px;
+    width: 800px;
+    height: 100px;
+    margin: auto;
+    top: 20px;
+    position: relative;
+}
+
 .chatInputBox {
   background: #ffffff;
   border-radius: 0px 0px 12px 12px;
