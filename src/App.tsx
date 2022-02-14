@@ -4,7 +4,7 @@ import Chat from "./components/Chat";
 
 function App() {
   return (
-    <div>
+    <div className="chat">
       <Chat />
     </div>
   );
