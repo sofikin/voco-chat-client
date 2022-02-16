@@ -24,10 +24,8 @@ function Chat() {
         </div>
       </div>
       <div className="chatInputBox">
-        <div>
-          <div className="username">Guest3367</div>
-          <div className="input">Input text</div>
-        </div>
+        <div className="username">Guest3367</div>
+        <div className="input">Input text</div>
         <div className="btn">Send</div>
       </div>
     </div>
