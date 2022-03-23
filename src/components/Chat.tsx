@@ -32,8 +32,9 @@ function Chat() {
       </div>
       <div className="chatInputBox">
         <form>
-          <div className="username">
+          <div>
             <input
+              className="username"
               type="username"
               name="username"
               placeholder="Username"
@@ -41,8 +42,9 @@ function Chat() {
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
-          <div className="input">
+          <div>
             <input
+              className="input"
               type="text"
               name="text"
               placeholder="Type your message.."
@@ -50,8 +52,10 @@ function Chat() {
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
-          <div className="btn">
-            <button onClick={() => handleInput()}>Input</button>
+          <div>
+            <button className="btn" onClick={() => handleInput()}>
+              Input
+            </button>
           </div>
         </form>
         {username ? (
