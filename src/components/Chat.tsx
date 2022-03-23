@@ -54,7 +54,13 @@ function Chat() {
             <button onClick={() => handleInput()}>Input</button>
           </div>
         </form>
-        {username ? <p>Welcome {username}!</p> : " "}
+        {username ? (
+          <p>
+            {username}: {message}
+          </p>
+        ) : (
+          " "
+        )}
       </div>
     </div>
   );
