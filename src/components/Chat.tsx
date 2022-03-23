@@ -24,9 +24,17 @@ function Chat() {
         </div>
       </div>
       <div className="chatInputBox">
-        <div className="username">Guest3367</div>
-        <div className="input">Input text</div>
-        <div className="btn">Send</div>
+        <form>
+          <div className="username">
+            <input type="username" placeholder="Username" required />
+          </div>
+          <div className="input">
+            <input type="text" placeholder="Type your message.." required />
+          </div>
+          <div className="btn">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
       </div>
     </div>
   );
