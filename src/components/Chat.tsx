@@ -39,6 +39,7 @@ function Chat() {
               className="username"
               type="username"
               name="username"
+              value={username}
               placeholder="Username"
               required
               onChange={(e) => setUsername(e.target.value)}
@@ -49,6 +50,7 @@ function Chat() {
               className="input"
               type="text"
               name="text"
+              value={message}
               placeholder="Type your message.."
               required
               onChange={(e) => setMessage(e.target.value)}
