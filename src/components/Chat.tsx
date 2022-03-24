@@ -6,10 +6,12 @@ import dot from "./Oval.svg";
 function Chat() {
   const [username, setUsername] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  const messages = [username, message];
+  const [messages, setMessages] = useState<Array<object>>([]);
 
-  const handleInput = () => {
-    console.log(username, message, messages);
+  const handleInput = (event: React.FormEvent) => {
+    event.preventDefault();
+    setMessages([...messages, { username, message }]);
+    setMessage("");
   };
   return (
     <div className="chat">
