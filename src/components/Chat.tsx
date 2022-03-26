@@ -10,9 +10,9 @@ function Chat() {
 
   const handleInput = (event: React.FormEvent) => {
     event.preventDefault();
-    setMessages([...messages, { username, message }]);
-    setMessage("");
+    setMessages([...messages, { username: username, message: message }]);
   };
+
   return (
     <div className="chat">
       <h1>KHK</h1>
@@ -30,10 +30,22 @@ function Chat() {
               </>
             );
           })}
+          {messages.map(() => {
+            return (
+              <>
+                <div className="chatContainer">
+                  <div className="chatMessage">{message}</div>
+                  <div className="chatUsername">{username}</div>
+                  <img className="dot" src={dot} alt="dot" />
+                </div>
+              </>
+            );
+          })}
+          ;
         </div>
       </div>
       <div className="chatInputBox">
-        <form>
+        <form onSubmit={handleInput}>
           <div>
             <input
               className="username"
@@ -57,18 +69,11 @@ function Chat() {
             />
           </div>
           <div>
-            <button className="btn" onClick={() => handleInput()}>
+            <button className="btn" onClick={(e) => handleInput(e)}>
               Input
             </button>
           </div>
         </form>
-        {username ? (
-          <p>
-            {username}: {message}
-          </p>
-        ) : (
-          " "
-        )}
       </div>
     </div>
   );
