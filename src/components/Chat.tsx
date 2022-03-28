@@ -3,14 +3,20 @@ import "./Chat.css";
 import data from "../data.json";
 import dot from "./Oval.svg";
 
+export interface ChatMessages {
+  message: string;
+  username: string;
+}
+
 function Chat() {
   const [username, setUsername] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  const [messages, setMessages] = useState<Array<object>>([]);
+  const [messages, setMessages] = useState<Array<ChatMessages>>([]);
 
   const handleInput = (event: React.FormEvent) => {
     event.preventDefault();
     setMessages([...messages, { username: username, message: message }]);
+    setMessage("");
   };
 
   return (
@@ -30,12 +36,12 @@ function Chat() {
               </>
             );
           })}
-          {messages.map(() => {
+          {messages.map((item) => {
             return (
               <>
                 <div className="chatContainer">
-                  <div className="chatMessage">{message}</div>
-                  <div className="chatUsername">{username}</div>
+                  <div className="chatMessage">{item.message}</div>
+                  <div className="chatUsername">{item.username}</div>
                   <img className="dot" src={dot} alt="dot" />
                 </div>
               </>
