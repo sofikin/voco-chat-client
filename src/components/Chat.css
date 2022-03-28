@@ -28,7 +28,7 @@ h1 {
 
 .chatBox {
   background: #1d2028;
-  border-radius: 12px;
+  border-radius: 12px 0 0 0;
   width: 900px;
   height: 700px;
   margin: auto;
@@ -38,6 +38,8 @@ h1 {
 .chatBox {
 overflow: scroll;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .chatBox::-webkit-scrollbar {
